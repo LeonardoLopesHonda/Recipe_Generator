@@ -4,68 +4,586 @@
 }
 
 html, body {
+    min-width: 100%;
     height: 100%;
-}
-
-.title {
-    padding: 1em;
-    border-bottom: 1px solid black;
-
-    text-align: center;
-}
-
-.main-content {
-    width: 100%;
-}
-
-.Home {
-    margin-top: 1em;
-    width: 20%;
-    display: grid;
-    place-content: center;
-
-    text-align: center;
-    margin: auto;
-}
-
-.Home-card {
-    width: 400px;
-    min-width: 300px;
-    min-height: 400px;
-
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    margin: auto;
-    margin-top: 2rem;
-
-    border-radius: 25px;
-    border: 1px solid black;
-
-    overflow: hidden;
-    
-    transition: scale 1.5s, opacity 1s;
-}
-
-.Home-card h2 {
-    padding-top: 1em;
-    padding-bottom: .5em;
-}
-
-.enable-recipe-button {
-    width: 70%;
-    padding: 1.5em;
-    margin: 4em;
-    margin-top: 2em;
+    background: white;
     color: black;
+    text-align: center;
+}
 
-    align-self: center;
-    border-radius: 25px;
-    background: transparent;
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-    transition: background 1.5s,
-    box-shadow 1.5s,
-    scale 500ms;
+@media (max-width: 475px) {
+    .title {
+        padding-top: 1em;
+        padding-bottom: 1em;
+        border-bottom: 1px solid black;
+        border-radius: 15px;
+    
+        text-align: center;
+    }
+    
+    .Home {
+        margin-top: 2rem;
+        display: grid;
+        place-content: center;
+    
+        text-align: center;
+    }
+    
+    .Home-card {
+        max-width: 280px;
+        max-height: 380px;
+        margin: auto;
+    
+        display: flex;
+        flex-direction: column;
+    
+        border-radius: 30px;
+        border: 1px solid black;
+    }
+    
+    .Home-card h2 {
+        font-size: x-large;
+        margin-top: 1em;
+    }
+    
+    .enable-recipe-button {
+        width: 60%;
+        padding: 1.5em;
+        margin-bottom: 4em;
+
+        font-weight: 700;
+        font-size: smaller;
+    
+        align-self: center;
+        border-radius: 25px;
+        background: transparent;
+    
+        transition: background 1.5s,
+        box-shadow 1.5s,
+        scale 500ms;
+    }
+    
+    .Home-card img {
+        margin: auto;
+        width: 80%;
+    }
+    
+    .interactive-card {
+        margin-top: 1.5rem;
+    
+        text-align: center;
+    }
+    
+    .card {
+        max-width: 280px;
+        max-height: 380px;
+    
+        overflow: hidden;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid black;
+        margin: auto;
+    
+        border-radius: 25px;
+    }
+    
+    .card img {
+        width: 100%;
+        max-width: 350px;
+        min-height: 200px;
+    
+        border-bottom: 1px solid black;
+    }
+    
+    .card h2{
+        margin: .6rem;
+        padding: .8rem;
+        border-radius: 25px;
+        word-wrap: break-word;
+        max-width: 250px;
+
+        font-size: x-large;
+        font-weight: 400;
+    }
+    
+    .buttons-container {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 2rem;
+    }
+    
+    .buttons-container button {
+        background: white;
+        border: .5px solid black;
+        border-radius: 100%;
+        padding: 2rem;
+    
+        cursor: pointer;
+    }
+}
+
+/* xs */
+@media (min-width: 475px){
+    .container {
+        max-width: 475px;
+    }
+    
+    .title {
+        padding-top: 1em;
+        padding-bottom: 1em;
+        border-bottom: 1px solid black;
+        border-radius: 15px;
+    
+        text-align: center;
+    }
+    
+    .Home {
+        display: grid;
+        place-content: center;
+    
+        text-align: center;
+        margin: auto;
+    }
+    
+    .Home-card {
+        margin-top: 2rem;
+        max-width: 430px;
+        padding-bottom: 2em;
+    
+        display: flex;
+        flex-direction: column;
+    
+        border-radius: 30px;
+        border: 1px solid black;
+    }
+    
+    .Home-card h2 {
+        font-size: x-large;
+        margin-top: 1em;
+    }
+
+    .Home-card img {
+        margin: auto;
+        width: 60%;
+    }
+    
+    .enable-recipe-button {
+        width: 55%;
+        padding: 1.5em;
+        margin-bottom: 4em;
+
+        font-size: medium;
+    
+        align-self: center;
+        border-radius: 25px;
+    
+        transition: background 1.5s,
+        box-shadow 1.5s,
+        scale 500ms;
+    }
+    
+    .interactive-card {
+        margin-top: 1.5rem;
+    
+        text-align: center;
+    }
+    
+    .card {
+        max-width: 400px;
+        max-height: 400px;
+    
+        overflow: hidden;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid black;
+        margin: auto;
+    
+        border-radius: 25px;
+    }
+    
+    .card img {
+        width: 100%;
+        max-width: 400px;
+    
+        border-bottom: 1px solid black;
+    }
+    
+    .card h2{
+        margin: .6rem;
+        padding: .8rem;
+        border-radius: 25px;
+        word-wrap: break-word;
+        max-width: 250px;
+
+        font-size: xx-large;
+        font-weight: 500;
+    }
+    
+    .buttons-container {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 2rem;
+    }
+    
+    .buttons-container button {
+        background: white;
+        border: .5px solid black;
+        border-radius: 100%;
+        padding: 2.5rem;
+    
+        cursor: pointer;
+    }
+}
+
+/* sm */
+@media (min-width: 640px){
+    .container {
+        max-width: 640px;
+    }
+    
+    .title {
+        max-width: 100%;
+        padding-top: 2em;
+        padding-bottom: 2em;
+        border-bottom: 1px solid black;
+
+        font-size: x-large;
+    }
+    
+    .Home {
+        display: grid;
+        place-content: center;
+    
+        text-align: center;
+        margin: auto;
+    }
+    
+    .Home-card {
+        margin-top: 2rem;
+        max-width: 430px;
+    
+        display: flex;
+        flex-direction: column;
+    
+        border-radius: 30px;
+        border: 1px solid black;
+    }
+    
+    .Home-card h2 {
+        font-size: xx-large;
+        margin-top: 1em;
+    }
+
+    .Home-card img {
+        margin: auto;
+        width: 60%;
+    }
+    
+    .enable-recipe-button {
+        width: 55%;
+        padding: 1.5em;
+        margin: auto;
+        
+        font-weight: 600;
+        font-size: large;
+    
+        align-self: center;
+        border-radius: 25px;
+    
+        transition: background 1.5s,
+        box-shadow 1.5s,
+        scale 500ms;
+    }
+    
+    .interactive-card {
+        margin: auto;
+        margin-top: 1.5rem;
+    
+        text-align: center;
+    }
+    
+    .card {
+        max-width: 600px;
+        max-height: 600px;
+    
+        overflow: hidden;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid black;
+        margin: auto;
+    
+        border-radius: 25px;
+    }
+    
+    .card img {
+        width: 100%;
+        max-width: 600px;
+    
+        border-bottom: 1px solid black;
+    }
+    
+    .card h2{
+        margin: .6rem;
+        padding: .8rem;
+        border-radius: 25px;
+        word-wrap: break-word;
+        max-width: 250px;
+
+        font-size: xx-large;
+        font-weight: 500;
+    }
+    
+    .buttons-container {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 2rem;
+    }
+    
+    .buttons-container button {
+        background: white;
+        border: .5px solid black;
+        border-radius: 100%;
+        padding: 3.5rem;
+    
+        cursor: pointer;
+    }
+}
+
+/* md */
+@media (min-width: 768px){
+    .title {
+        max-width: 100%;
+        padding-top: 2.5em;
+        padding-bottom: 2.5em;
+        border-bottom: 1px solid black;
+    }
+    
+    .Home {
+        display: grid;
+        place-content: center;
+    
+        text-align: center;
+        margin: auto;
+    }
+    
+    .Home-card {
+        margin-top: 2rem;
+        max-width: 430px;
+    
+        display: flex;
+        flex-direction: column;
+    
+        border-radius: 30px;
+        border: 1px solid black;
+    }
+    
+    .Home-card h2 {
+        font-size: xx-large;
+        margin-top: 1em;
+    }
+
+    .Home-card img {
+        margin: auto;
+        width: 60%;
+    }
+    
+    .enable-recipe-button {
+        width: 55%;
+        padding: 1.5em;
+        margin: auto;
+        
+        font-weight: 600;
+        font-size: large;
+    
+        align-self: center;
+        border-radius: 25px;
+    
+        transition: background 1.5s,
+        box-shadow 1.5s,
+        scale 500ms;
+    }
+    
+    .interactive-card {
+        margin: auto;
+        margin-top: 1.5rem;
+    
+        text-align: center;
+    }
+    
+    .card {
+        max-width: 720px;
+        max-height: 700px;
+    
+        overflow: hidden;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid black;
+        margin: auto;
+    
+        border-radius: 25px;
+    }
+    
+    .card img {
+        width: 100%;
+        max-width: 720px;
+    
+        border-bottom: 1px solid black;
+    }
+    
+    .card h2{
+        margin: .6rem;
+        padding: .8rem;
+        border-radius: 25px;
+        word-wrap: break-word;
+        max-width: 250px;
+
+        font-size: xx-large;
+        font-weight: 500;
+    }
+    
+    .buttons-container {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 2rem;
+    }
+    
+    .buttons-container button {
+        background: white;
+        border: .5px solid black;
+        border-radius: 100%;
+        padding: 4rem;
+    
+        cursor: pointer;
+    }
+}
+
+/* lg */
+@media (min-width: 1024px){
+    .title {
+        max-width: 100%;
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+        border-bottom: 1px solid black;
+
+        font-size: medium;
+    }
+
+    .Home {
+        display: grid;
+        place-content: center;
+    
+        text-align: center;
+        margin: auto;
+    }
+    
+    .Home-card {
+        margin-top: 2rem;
+        max-width: 430px;
+    
+        display: flex;
+        flex-direction: column;
+    
+        border-radius: 30px;
+        border: 1px solid black;
+    }
+    
+    .Home-card h2 {
+        font-size: xx-large;
+        margin-top: 1em;
+    }
+
+    .Home-card img {
+        margin: auto;
+        width: 60%;
+    }
+    
+    .enable-recipe-button {
+        width: 55%;
+        padding: 1.5em;
+        margin: auto;
+        
+        font-weight: 600;
+        font-size: medium;
+    
+        align-self: center;
+        border-radius: 25px;
+    
+        transition: background 1.5s,
+        box-shadow 1.5s,
+        scale 500ms;
+    }
+    
+    .interactive-card {
+        margin: auto;
+        margin-top: 1.5rem;
+    
+        text-align: center;
+    }
+    
+    .card {
+        max-width: 500px;
+    
+        overflow: hidden;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid black;
+        margin: auto;
+    
+        border-radius: 25px;
+    }
+    
+    .card img {
+        width: 100%;
+        max-width: 500px;
+    
+        border-bottom: 1px solid black;
+    }
+    
+    .card h2{
+        margin: .6rem;
+        padding: .8rem;
+        border-radius: 25px;
+        word-wrap: break-word;
+        max-width: 250px;
+
+        font-size: x-large;
+        font-weight: 500;
+    }
+    
+    .buttons-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+
+        margin: auto;
+
+        margin-top: 2rem;
+    }
+    
+    .buttons-container button {
+        background: white;
+        border: .5px solid black;
+        border-radius: 100%;
+        padding: 2rem;
+    
+        cursor: pointer;
+    }
 }
 
 .enable-recipe-button:hover {
@@ -76,91 +594,6 @@ html, body {
     -moz-box-shadow: 0px 16px 11px 2px rgba(0,0,0,0.75);
     box-shadow: 0px 16px 11px 2px rgba(0,0,0,0.75);
     scale: 1.1;
-}
-
-.Home-card img {
-    margin: auto;
-    width: 80%;
-}
-
-.interactive-card {
-    width: 60%;
-    margin: auto;
-    margin-top: 4rem;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
-    position: relative;
-
-    border-bottom: 1px solid rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 5px 15px 2px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 5px 15px 2px rgba(0,0,0,0.75);
-    box-shadow: 0px 5px 15px 2px rgba(0,0,0,0.75);
-
-    border-radius: 25px;
-    overflow: hidden;
-
-    min-width: 350px;
-    min-height: 200px;
-}
-
-.card img {
-    width: 360px;
-    height: 70%;
-
-    min-width: 260px;
-    min-height: 200px;
-
-    top: 0;
-    bottom: 0;
-    z-index: -2;
-}
-
-.card h2{
-    margin: .6rem;
-    padding: .8rem;
-    background: rgba(254,254,254,0.55);
-    border-radius: 25px;
-    word-wrap: break-word;
-    max-width: 250px;
-}
-
-.buttons-container {
-    width: 60%;
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 2rem;
-}
-
-.buttons-container button {
-    background: white;
-    border: .5px solid black;
-    border-radius: 100%;
-
-    cursor: pointer;
-}
-
-.buttons-container button i {
-    color: black;
-    padding: 2rem;
-}
-
-.refresh-recipe-btn i:hover {
-    animation: rotate 500ms ease-in-out 0s;
-}
-
-.redirect-btn i:hover {
-    animation: blink 500ms ease-in-out .2s;
 }
 
 /* Using 'display: none' disables all future animations */
@@ -175,7 +608,22 @@ html, body {
 
 a {
     width: 100%;
+    height: 100%;
     text-decoration: none !important;
+}
+
+.buttons-container button a i {
+    width: 100%;
+    height: 100%;
+    color: black;
+}
+
+.refresh-recipe-btn i:hover {
+    animation: rotate 500ms ease-in-out 0s;
+}
+
+.redirect-btn i:hover {
+    animation: blink 500ms ease-in-out .2s;
 }
 
 @keyframes rotate {
